@@ -7,8 +7,7 @@ A modern Reddit clone built with Next.js and TypeScript, featuring a clean and r
 1. Clone the repository:
 
 ```bash
-git clone <your-repo-url>
-cd reddit-clone
+https://github.com/PrinceSoni4090/Subreddit-Explorer.git
 ```
 
 2. Install dependencies:
