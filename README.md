@@ -2,7 +2,7 @@
 
 https://subreddit-explorer-five.vercel.app/
 
-# Reddit Clone
+# SubReddit Explorer
 
 A modern Reddit clone built with Next.js and TypeScript, featuring a clean and responsive user interface.
 
