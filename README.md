@@ -35,12 +35,17 @@ npm run dev
 
 ## Technologies Used
 
-- **Next.js** - React framework for production
-- **TypeScript** - For type safety
-- **Tailwind CSS** - For styling
-- **Shadcn/ui** - UI components
-- **ESLint** - Code linting
+## Technologies Used
+
+- **React.js** - Used for building custom hooks and reusable components
+- **Next.js** - Framework for server-side rendering and routing
+- **TypeScript** - For type safety and better developer experience
+- **Redux Toolkit** - State management for handling application-wide state
+- **Tailwind CSS** - Utility-first CSS framework for styling
+- **Shadcn/ui** - Modern UI components built on Radix UI
 - **Node.js** - Runtime environment
+- **ESLint** - Code linting and formatting
+- **Reddit API** - For fetching subreddit and post data
 
 ## Features
 
