@@ -69,11 +69,8 @@ const subredditsSlice = createSlice({
         localStorage.setItem('favoriteSubreddits', JSON.stringify(state.favorites));
       }
     },
-    setPopularSubreddits: (state, action: PayloadAction<Subreddit[]>) => {
-      state.popularSubreddits = action.payload;
-    },
   },
 });
 
-export const { addToFavorites, removeFromFavorites, setPopularSubreddits } = subredditsSlice.actions;
+export const { addToFavorites, removeFromFavorites } = subredditsSlice.actions;
 export default subredditsSlice.reducer;
