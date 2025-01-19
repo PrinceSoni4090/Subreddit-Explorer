@@ -4,8 +4,6 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useDebounce } from '@/lib/hooks/useDebounce';
 import { Loader2 } from 'lucide-react';
-import { Toast } from '@radix-ui/react-toast';
-import { toast } from '@/hooks/use-toast';
 
 interface Subreddit {
   id: string;
@@ -132,11 +130,6 @@ export function SearchBar() {
     try {
       if (!subreddit || (!subreddit.url && !subreddit.name && !subreddit.id)) {
         console.error('Invalid subreddit data:', subreddit);
-        toast({
-          title: "Error",
-          description: "Unable to navigate to this subreddit. Please try another one.",
-          variant: "destructive",
-        });
         return;
       }
 
@@ -146,11 +139,6 @@ export function SearchBar() {
       setQuery('');
     } catch (error) {
       console.error('Error navigating to subreddit:', error);
-      toast({
-        title: "Navigation Error",
-        description: "Something went wrong. Please try again later.",
-        variant: "destructive",
-      });
     }
   };
 
