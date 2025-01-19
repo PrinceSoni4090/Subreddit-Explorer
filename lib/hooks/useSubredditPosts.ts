@@ -56,15 +56,11 @@ export const useSubredditPosts = () => {
         return;
       }
 
-      const url = subreddit.toLowerCase() === 'popular' 
-        ? `https://www.reddit.com/subreddits/popular.json?limit=10${after ? `&after=${after}` : ''}`
-        : `https://www.reddit.com/r/${subreddit}/hot.json?limit=10${after ? `&after=${after}` : ''}`;
+      const url = `https://www.reddit.com/r/${subreddit}/hot.json?limit=10${after ? `&after=${after}` : ''}`;
       
-      console.log('Fetching from URL:', url);
       const response = await axios.get(url, {
         headers: {
-          'Accept': 'application/json',
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+          'User-Agent': 'SubredditExplorer/1.0'
         }
       });
 
@@ -93,8 +89,6 @@ export const useSubredditPosts = () => {
 
      
       setPosts(prev => reset ? newPosts : [...prev, ...newPosts]);
-      
-   
       setAfter(response.data.data.after);
       setHasMore(!!response.data.data.after);
       
